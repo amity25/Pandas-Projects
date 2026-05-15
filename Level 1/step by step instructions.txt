@@ -1,4 +1,4 @@
-Please install Jupytr notebook to practice the code. Installtion can be seen from google. I have included the jupytr notebook file which contains the code.
+Please install Jupyter notebook to practice the code. Installtion can be seen from google. I have included the jupytr notebook file which contains the code.
 
 
 STEP 1 — Install Pandas
@@ -16,6 +16,7 @@ print(pd.__version__)
 If version prints successfully → Pandas is installed correctly.
 
 STEP 2 — Import Pandas
+
 # Import pandas library
 import pandas as pd
 
@@ -23,6 +24,7 @@ Why pd?
 
 pd is just a shortcut alias
 Everyone in the data industry uses this standard
+
 STEP 3 — Create Your First DataFrame
 # Import pandas
 import pandas as pd
@@ -60,6 +62,7 @@ Example:
 name	sales
 Amit	1000
 Rahul	2000
+
 2. Series
 
 A Series means:
@@ -79,6 +82,7 @@ Output:
 This is a Pandas Series.
 
 3. Rows and Columns
+
 Get Column Names
 # Show all column names
 print(df.columns)
@@ -107,6 +111,7 @@ Amit,1000,North
 Rahul,2000,South
 Priya,1500,West
 Read CSV
+
 # Import pandas
 import pandas as pd
 
@@ -223,6 +228,7 @@ Print last row.
 Hint:
 
 df.tail(1)
+
 Task 5
 
 Find total number of rows and columns.
