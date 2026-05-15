@@ -1,0 +1,249 @@
+Please install Jupytr notebook to practice the code. Installtion can be seen from google. I have included the jupytr notebook file which contains the code.
+
+
+STEP 1 — Install Pandas
+
+Open Command Prompt or Terminal and run:
+
+pip install pandas
+
+To check installation:
+
+import pandas as pd
+
+print(pd.__version__)
+
+If version prints successfully → Pandas is installed correctly.
+
+STEP 2 — Import Pandas
+# Import pandas library
+import pandas as pd
+
+Why pd?
+
+pd is just a shortcut alias
+Everyone in the data industry uses this standard
+STEP 3 — Create Your First DataFrame
+# Import pandas
+import pandas as pd
+
+# Creating dictionary data
+data = {
+    "name": ["Amit", "Rahul", "Priya"],
+    "sales": [1000, 2000, 1500]
+}
+
+# Convert dictionary into DataFrame
+df = pd.DataFrame(data)
+
+# Print DataFrame
+print(df)
+
+Output:
+
+    name  sales
+0   Amit   1000
+1  Rahul   2000
+2  Priya   1500
+
+Understanding Important Concepts
+1. DataFrame
+
+A DataFrame is:
+
+A table
+Rows + Columns
+Similar to Excel sheet
+
+Example:
+
+name	sales
+Amit	1000
+Rahul	2000
+2. Series
+
+A Series means:
+
+Single column of data
+
+Example:
+
+print(df["sales"])
+
+Output:
+
+0    1000
+1    2000
+2    1500
+
+This is a Pandas Series.
+
+3. Rows and Columns
+Get Column Names
+# Show all column names
+print(df.columns)
+Get Single Column
+# Get only sales column
+print(df["sales"])
+Get Multiple Columns
+# Get name and sales columns together
+print(df[["name", "sales"]])
+Get First Row
+# iloc means integer location
+# iloc[0] = first row
+
+print(df.iloc[0])
+
+STEP 4 — Read CSV File
+
+CSV = Comma Separated Values
+
+Very important in real-world data analysis.
+
+Example CSV file (sales.csv):
+
+name,sales,region
+Amit,1000,North
+Rahul,2000,South
+Priya,1500,West
+Read CSV
+# Import pandas
+import pandas as pd
+
+# Read CSV file
+df = pd.read_csv("sales.csv")
+
+# Print data
+print(df)
+
+IMPORTANT:
+
+CSV file should be in same folder as Python script
+OR
+Provide full path
+
+Example:
+
+df = pd.read_csv("C:/Users/Amit/Desktop/sales.csv")
+
+STEP 5 — View Data
+
+These are MOST IMPORTANT functions for beginners.
+
+head()
+
+Shows first 5 rows.
+
+# Show first 5 rows
+print(df.head())
+
+Custom rows:
+
+# Show first 2 rows
+print(df.head(2))
+tail()
+
+Shows last rows.
+
+# Show last 5 rows
+print(df.tail())
+info()
+
+Shows:
+
+Column names
+Data types
+Missing values
+Total rows
+# Get dataset information
+print(df.info())
+describe()
+
+Shows statistics for numeric columns.
+
+# Statistical summary
+print(df.describe())
+
+You’ll see:
+
+mean
+min
+max
+count
+standard deviation
+
+STEP 6 — Mini Practice Project
+
+Create this dataset:
+
+import pandas as pd
+
+# Sales dataset
+data = {
+    "employee": ["Amit", "Rahul", "Priya", "Neha"],
+    "sales": [1000, 2500, 1800, 3000],
+    "region": ["North", "South", "West", "North"]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Show full dataset
+print(df)
+
+print("\nFirst 2 Rows")
+print(df.head(2))
+
+print("\nDataset Info")
+print(df.info())
+
+print("\nStatistics")
+print(df.describe())
+
+Level 2 Practice Tasks
+
+Try these yourself first.
+
+Task 1
+
+Print only employee column.
+
+Task 2
+
+Print only sales column.
+
+Task 3
+
+Print first 3 rows.
+
+Task 4
+
+Print last row.
+
+Hint:
+
+df.tail(1)
+Task 5
+
+Find total number of rows and columns.
+
+Hint:
+
+df.shape
+Important Beginner Notes
+Difference Between Python List & DataFrame
+
+Python List:
+
+sales = [1000, 2000, 3000]
+
+Pandas DataFrame:
+
+df = pd.DataFrame(...)
+
+DataFrames are better for:
+
+filtering
+analysis
+reporting
+Excel-like operations
